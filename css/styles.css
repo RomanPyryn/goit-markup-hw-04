@@ -8,6 +8,7 @@
   --secondary-bg: #f5f4fa;
   --footer-bg: #2f303a;
   --border-color: #eeeeee;
+  --icon-color: #afb1b8;
   --card-set-gap: 30px;
   --title-gap: 50px;
 }
@@ -281,6 +282,29 @@ header {
 .team-content {
   padding-top: var(--card-set-gap);
   padding-bottom: var(--card-set-gap);
+}
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+}
+
+.client {
+  width: 170px;
+  height: 92px;
+  padding: 16px 32px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.client + .client {
+  margin-left: var(--card-set-gap);
+}
+.icon {
+  fill: var(--icon-color);
+}
+.icon:hover {
+  fill: var(--hover-text-color);
 }
 
 /* Проекти */
