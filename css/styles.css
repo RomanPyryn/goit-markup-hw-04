@@ -112,6 +112,7 @@ header {
   padding-top: 32px;
   padding-bottom: 32px;
 
+  fill: var(--icon-color);
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -246,6 +247,7 @@ header {
 }
 
 .peculiarities-list-title {
+  margin-top: var(--card-set-gap);
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -253,6 +255,15 @@ header {
   text-transform: uppercase;
 
   color: var(--title-text-color);
+}
+
+.icon-box {
+  width: 270px;
+  height: 120px;
+  padding: 25px 100px;
+
+  background: var(--secondary-bg);
+  border-radius: 4px;
 }
 
 .work {
@@ -291,26 +302,54 @@ header {
   padding-bottom: var(--card-set-gap);
 }
 
+.social-networks {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.social-networks .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: var(--icon-color);
+}
+
+.social-networks .link:hover,
+.social-networks .link:focus {
+  fill: var(--white);
+  background-color: var(--hover-text-color);
+}
+
+.social-networks .item + .item {
+  margin-left: 10px;
+}
+
 .clients-list {
   display: flex;
   justify-content: center;
 }
 
-.client {
+.client .link {
+  display: inline-block;
   width: 170px;
   height: 92px;
   padding: 16px 32px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  fill: var(--icon-color);
 }
 
 .client + .client {
   margin-left: var(--card-set-gap);
 }
-.icon {
-  fill: var(--icon-color);
-}
-.icon:hover {
+
+.client .link:hover,
+.client .link:focus {
+  border: 1px solid var(--hover-text-color);
   fill: var(--hover-text-color);
 }
 
