@@ -82,20 +82,6 @@ header {
   align-items: center;
 }
 
-.site-nav {
-  display: flex;
-}
-
-.aut-nav {
-  display: flex;
-  margin-left: auto;
-}
-
-.site-nav .item + .item,
-.aut-nav .item + .item {
-  margin-left: var(--title-gap);
-}
-
 /* Лого */
 
 .logo {
@@ -113,10 +99,15 @@ header {
   color: var(--black);
 }
 
-/* Навигация и авторизация */
+/* Навигация */
+
+.site-nav,
+.contacts {
+  display: flex;
+}
 
 .site-nav .link,
-.aut-nav .link {
+.contacts .link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -128,19 +119,35 @@ header {
   letter-spacing: 0.02em;
 }
 
-.aut-nav .link {
-  color: var(--primary-text-color);
+.site-nav .item + .item,
+.contacts .item + .item {
+  margin-left: var(--title-gap);
 }
 
 .site-nav .link:hover,
 .site-nav .link:focus,
-.aut-nav .link:hover,
-.aut-nav .link:focus {
+.contacts .link:hover,
+.contacts .link:focus {
   color: var(--hover-text-color);
+  fill: var(--hover-text-color);
+}
+
+.contacts .link {
+  display: flex;
+  align-items: center;
+  color: var(--primary-text-color);
 }
 
 .site-nav .current {
   color: var(--hover-text-color);
+}
+
+.contacts {
+  margin-left: auto;
+}
+
+.contact-icon {
+  margin-right: 10px;
 }
 
 /* Шапка */
