@@ -138,8 +138,24 @@ header {
   color: var(--primary-text-color);
 }
 
-.site-nav .current {
+.link.current {
+  position: relative;
+
   color: var(--hover-text-color);
+}
+
+.link.current::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--hover-text-color);
 }
 
 .contacts {
