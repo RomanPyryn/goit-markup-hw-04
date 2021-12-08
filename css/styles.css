@@ -7,6 +7,7 @@
   --white: #ffffff;
   --secondary-bg: #f5f4fa;
   --footer-bg: #2f303a;
+  --actions-bg: rgba(33, 150, 243, 0.9);
   --border-color: #eeeeee;
   --icon-color: #afb1b8;
   --card-set-gap: 30px;
@@ -449,6 +450,39 @@ header {
   background: var(--white);
   border: 1px solid var(--border-color);
   box-sizing: border-box;
+}
+
+.project-actions {
+  position: relative;
+}
+
+.project-actions::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--actions-bg);
+}
+
+.project-actions-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  width: 322px;
+  height: 168px;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+
+  color: var(--white);
+
+  transform: translate(-50%, -50%);
 }
 
 /* Подвал */
