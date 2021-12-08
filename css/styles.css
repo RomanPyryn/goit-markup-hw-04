@@ -7,11 +7,13 @@
   --white: #ffffff;
   --secondary-bg: #f5f4fa;
   --footer-bg: #2f303a;
-  --actions-bg: rgba(33, 150, 243, 0.9);
+  --action-bg: rgba(33, 150, 243, 0.9);
   --border-color: #eeeeee;
   --icon-color: #afb1b8;
   --card-set-gap: 30px;
   --title-gap: 50px;
+  --action-time: 250ms;
+  --action-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html {
@@ -454,17 +456,26 @@ header {
 
 .project-actions {
   position: relative;
+  overflow: hidden;
 }
 
-.project-actions::before {
-  display: inline-block;
+.actions-overlay {
   position: absolute;
-  content: "";
+  left: 0;
+  top: 0;
 
   width: 100%;
   height: 100%;
 
-  background-color: var(--actions-bg);
+  background-color: var(--action-bg);
+
+  transform: translateY(101%);
+  transition: transform var(--action-time) var(--action-function);
+}
+
+.projects-card .link:hover .actions-overlay,
+.projects-card .link:focus .actions-overlay {
+  transform: translateY(0);
 }
 
 .project-actions-text {
